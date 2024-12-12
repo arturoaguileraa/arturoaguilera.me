@@ -3,7 +3,6 @@ import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
@@ -59,7 +58,15 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? <ul className="flex flex-col py-4 items-center">
+        {navLinks.map((link, index) => (
+          <li key={index}>
+            <button onClick={() => setNavbarOpen(false)}>
+              <NavLink href={link.path} title={link.title} />
+            </button>
+          </li>
+        ))}
+      </ul> : null}
     </nav>
   );
 };
