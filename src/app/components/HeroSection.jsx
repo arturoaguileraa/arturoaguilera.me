@@ -42,13 +42,16 @@ const HeroSection = () => {
             <TypeAnimation
               sequence={[
                 "Arturo Aguilera",
-                2000,
+                2500,
                 "Web Developer",
-                1000,
-                "Malware Analyst Enthusiast",
-                1000,
+                1300,
                 "AI Developer",
-                1000,
+                1300,
+                "Matemathician",
+                1300,
+                "Malware Analyst",
+                700,
+
               ]}
               speed={50}
               repeat={Infinity}
