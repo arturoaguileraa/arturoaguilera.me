@@ -25,7 +25,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>University Expert Diploma in Reverse Engineering and Malware
-        Intelligence - GSEC, Málaga</li>
+          Intelligence - GSEC, Málaga</li>
         <li>Artificial Intelligence - Universidad Internacional de La Rioja (UNIR), Online</li>
         <li>Mathematic & Computer Science - University of Malaga, Spain.</li>
       </ul>
