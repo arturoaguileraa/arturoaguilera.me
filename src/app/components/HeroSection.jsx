@@ -66,7 +66,7 @@ const HeroSection = () => {
               href="/#contact"
               className="px-6 inline-block py-3 w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-              Let's talk!
+              Let&apos;s talk!
             </Link>
             <Link
               href="/cv.pdf"
