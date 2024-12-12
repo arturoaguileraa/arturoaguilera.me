@@ -7,56 +7,30 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    title: "Bachelor's Thesis in Mathematics",
+    description: "Mathematical Paper on Integration in Manifolds and Stokes’ Theorem.",
+    image: "/images/projects/tfg.png",
+    tag: ["All", "Research"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "/TFG-Aguilera-González-Arturo.pdf",
+    isResearch: true,
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
+    title: "buche - Bachelor's Thesis in Computer Science",
+    description: "Web application for real-time order management, menu organizers for establishments, and menu visualization.",
+    image: "/images/projects/buche.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/arturoaguileraa/buche-frontend",
+    previewUrl: "https://bucheapp.vercel.app/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "Portfolio Web",
+    description: "This website!",
+    image: "/images/projects/portfolio.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/arturoaguileraa/arturoaguilera.me",
     previewUrl: "/",
   },
 ];
@@ -97,8 +71,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="Research"
+          isSelected={tag === "Research"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -117,6 +91,7 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              isResearch={project.isResearch}
             />
           </motion.li>
         ))}
