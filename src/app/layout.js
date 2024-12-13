@@ -10,7 +10,7 @@ export const metadata = {
     url: "https://arturoaguilera.es",
     siteName: "Arturo Aguilera González",
     description: 'Portfolio of Arturo Aguilera González. Web Development, Artificial Intelligence, and Malware Analysis. Explore my projects and skills.',
-    images: [{ url: "https://arturoaguilera.es/projects/portfolio.jpg" }]
+    images: [{ url: "https://arturoaguilera.es/images/projects/portfolio.png" }]
   },
 }
 
