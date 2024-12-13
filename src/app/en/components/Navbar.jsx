@@ -2,7 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { Bars3Icon, XMarkIcon, GlobeAltIcon } from "@heroicons/react/24/solid"; // Importa el ícono GlobeAltIcon para el idioma
+import { useRouter } from "next/navigation";
 
 const navLinks = [
   {
@@ -21,6 +22,16 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const router = useRouter();
+
+  const handleLanguageChange = (language) => {
+    // Cambia la ruta según el idioma
+    if (language === "es") {
+      router.push("/es");
+    } else {
+      router.push("/");
+    }
+  };
 
   return (
     <nav className="fixed mx-auto border border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
@@ -55,18 +66,38 @@ const Navbar = () => {
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}
+            <li>
+              <button
+                onClick={() => handleLanguageChange("es")}
+                className="flex items-center gap-2 block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+              >
+                <GlobeAltIcon className="h-6 w-6" />
+                <span>Español</span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
-      {navbarOpen ? <ul className="flex flex-col py-4 items-center">
-        {navLinks.map((link, index) => (
-          <li key={index}>
-            <button onClick={() => setNavbarOpen(false)}>
-              <NavLink href={link.path} title={link.title} />
+      {navbarOpen ? (
+        <ul className="flex flex-col py-4 items-center">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <button onClick={() => setNavbarOpen(false)}>
+                <NavLink href={link.path} title={link.title} />
+              </button>
+            </li>
+          ))}
+          <li>
+            <button
+              onClick={() => handleLanguageChange("es")}
+              className="flex items-center gap-2 block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+            >
+              <GlobeAltIcon className="h-6 w-6" />
+              <span>Español</span>
             </button>
           </li>
-        ))}
-      </ul> : null}
+        </ul>
+      ) : null}
     </nav>
   );
 };
