@@ -50,9 +50,8 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          I&apos;m currently looking for new opportunities, my inbox is always
-          open. Whether you have a question or just want to say hi, I&apos;ll
-          try my best to get back to you!
+          I&apos;m actively exploring new opportunities and always happy to connect! Feel free to reach out if you have a question or simply want to chat.
+          I&apos;ll do my best to respond promptly!
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="https://github.com/arturoaguileraa" target="_blank" rel="noopener noreferrer">
@@ -61,6 +60,10 @@ const EmailSection = () => {
           <Link href="https://www.linkedin.com/in/arturoaguileraglez/" target="_blank" rel="noopener noreferrer">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
+          <Link href="mailto:arturoaguileraglez@gmail.com" target="_blank" rel="noopener noreferrer">
+            <img src={"https://img.icons8.com/?size=100&id=94652&format=png&color=FFFFFF"} width={49} height={49} alt="Mail Icon" />
+          </Link>
+
         </div>
       </div>
       <div>
