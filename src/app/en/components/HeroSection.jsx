@@ -49,7 +49,7 @@ const HeroSection = () => {
                 1300,
                 "Matemathician",
                 1300,
-                "Malware Analyst",
+                "Cibersecurity Enthusiast",
                 700,
 
               ]}
