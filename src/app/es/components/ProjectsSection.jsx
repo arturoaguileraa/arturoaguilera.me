@@ -7,16 +7,26 @@ import { motion, useInView } from "framer-motion";
 const proyectosData = [
   {
     id: 1,
+    titulo: "VTSearch",
+    descripcion: "Traductor con IA de lenguaje natural a lenguaje de consulta de VirusTotal (Google Thread Intelligence).",
+    imagen: "/images/projects/VTSearch.gif",
+    etiqueta: ["Todos", "Web", "IA"],
+    gitUrl: "https://github.com/arturoaguileraa/vtsearch",
+    previewUrl: "/",
+    soloCodigo: true,
+  },
+  {
+    id: 2,
     titulo: "Trabajo de Fin de Grado en Matemáticas",
     descripcion: "Trabajo matemático sobre integración en variedades y el teorema de Stokes.",
     imagen: "/images/projects/tfg.png",
     etiqueta: ["Todos", "Investigación"],
     gitUrl: "/",
     previewUrl: "/TFG-Aguilera-González-Arturo.pdf",
-    esInvestigacion: true,
+    soloVer: true,
   },
   {
-    id: 2,
+    id: 3,
     titulo: "buche - Trabajo de Fin de Grado en Ingeniería Informática",
     descripcion: "Aplicación web para la gestión de pedidos en tiempo real, organizadores de menús para establecimientos y visualización de menús.",
     imagen: "/images/projects/buche.png",
@@ -25,7 +35,7 @@ const proyectosData = [
     previewUrl: "https://bucheapp.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     titulo: "Portafolio Web",
     descripcion: "¡Este sitio web!",
     imagen: "/images/projects/portfolio.png",
@@ -74,6 +84,11 @@ const SeccionProyectos = () => {
           name="Investigación"
           isSelected={etiqueta === "Investigación"}
         />
+        <ProjectTag
+          onClick={manejarCambioEtiqueta}
+          name="IA"
+          isSelected={etiqueta === "IA"}
+        />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {proyectosFiltrados.map((proyecto, index) => (
@@ -91,7 +106,8 @@ const SeccionProyectos = () => {
               imgUrl={proyecto.imagen}
               gitUrl={proyecto.gitUrl}
               previewUrl={proyecto.previewUrl}
-              isResearch={proyecto.esInvestigacion}
+              onlySee={proyecto.soloVer}
+              onlyCode={proyecto.soloCodigo}
             />
           </motion.li>
         ))}
