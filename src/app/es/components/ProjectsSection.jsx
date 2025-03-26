@@ -43,6 +43,15 @@ const proyectosData = [
     gitUrl: "https://github.com/arturoaguileraa/arturoaguilera.me",
     previewUrl: "/",
   },
+  {
+    id: 5,
+    titulo: "El Corte Inglés AI Shopping Assistant",
+    descripcion: "Aplicación web desarrollada para el Innovation Challenge UMA. Mejora la experiencia de compra online mediante IA, integrando un probador virtual asistido y un agente conversacional que recomienda productos basándose en las preferencias del usuario.",
+    imagen: "/images/projects/ElCorteInglesAI.jpg",
+    etiqueta: ["Todos", "Web", "IA"],
+    gitUrl: "https://github.com/arturoaguileraa/dualthink",
+    previewUrl: "https://dualthink.vercel.app/",
+  }
 ];
 
 const SeccionProyectos = () => {
