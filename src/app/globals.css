@@ -18,10 +18,34 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@keyframes float3dY {
+  0% {
+    transform: perspective(600px) rotateY(0deg) translateY(0px);
+  }
+
+  25% {
+    transform: perspective(600px) rotateY(5deg) translateY(-6px);
+  }
+
+  50% {
+    transform: perspective(600px) rotateY(0deg) translateY(0px);
+  }
+
+  75% {
+    transform: perspective(600px) rotateY(-5deg) translateY(-6px);
+  }
+
+  100% {
+    transform: perspective(600px) rotateY(0deg) translateY(0px);
+  }
+}
+
+.animate-float-3dy {
+  animation: float3dY 5s linear infinite;
+  transform-style: preserve-3d;
 }
